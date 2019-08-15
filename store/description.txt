@@ -1,0 +1,27 @@
+- Minimalist hourglass button for Chrome
+
+- Use it to timebox speaking in meetings taking turns,
+e.g. in stand-up meetings and retrospectives
+
+- May be used for Pomodoro technique
+in a manual mode as intended
+
+- Or as a simple kitchen timer with minutes countdown
+
+
+How to use:
+
+- Click this button to set the number of minutes
+
+- The number of minutes left is shown right on the button
+
+- The background of this number changes
+from blue (all time left)
+through violet shades
+to red (one minute left)
+
+- It makes a Tick-Tock sound once a minute
+and a Cuckoo sound in the end
+
+- To disable sounds:
+right-click Hourglass button and select Options
