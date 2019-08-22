@@ -23,5 +23,5 @@ to red (one minute left)
 - It makes a Tick-Tock sound once a minute
 and a Cuckoo sound in the end
 
-- To disable sounds:
+- To adjust the volume or to disable the sounds:
 right-click Hourglass button and select Options

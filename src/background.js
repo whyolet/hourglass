@@ -52,37 +52,31 @@ chrome.browserAction.onClicked.addListener(function() {
 });
 
 chrome.alarms.onAlarm.addListener(function() {
-    chrome.storage.local.get({
+    chrome.storage.local.get(Object.assign({
         minutes_left: 0,
         minutes_entered: 0,
-        tick_tock: true,
-        cuckoo: true
-    }, function(stored) {
+    }, options), function(stored) {
         if (stored.minutes_left <= 0) return;
 
         chrome.storage.local.set({minutes_left: --stored.minutes_left});
         render(stored.minutes_left, stored.minutes_entered);
 
-        if (stored.tick_tock && (stored.minutes_left || !stored.cuckoo)) {
-            (new Audio("audio/tick-tock.mp3")).play();
-            // Based on http://www.orangefreesounds.com/horror-creepy-clock-ticking-sound-effect/
-            // https://creativecommons.org/licenses/by-nc/4.0/
-        }
+        if (stored.tick_tock
+            && (stored.minutes_left || !stored.cuckoo)
+        ) play(audios.tick_tock, stored.volume);
 
         if (stored.minutes_left) return;
 
         chrome.alarms.clearAll();
 
-        if (stored.cuckoo) (new Audio("audio/cuckoo-bird-sound.mp3")).play();
-        // http://www.orangefreesounds.com/cuckoo-bird-sound/
-        // https://creativecommons.org/licenses/by-nc/4.0/
+        if (stored.cuckoo) play(audios.cuckoo, stored.volume);
 
         chrome.notifications.create(name, {
             type: "basic",
             title: name,
             message: "Done!",
 
-            iconUrl: "img/icon128.png"
+            iconUrl: "images/icon128.png"
             // Based on Whyolet Icon - https://whyolet.com/
             // by Alina Chirkova-Huszcza - http://maiwelin.com/
         });
