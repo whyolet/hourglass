@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     chrome.storage.local.get(options, function(stored) {
         for (var option in options) {
             var input = document.getElementById(option), value = stored[option];
+            options[option] = value;
             if (typeof value === "boolean") input.checked = value;
             else input.value = value;
         }
@@ -19,21 +20,26 @@ document.getElementById("volume").addEventListener("change", function(event) {
     play(cuckoo ? audios.cuckoo : audios.tick_tock, volume);
 });
 
-document.getElementById("save").addEventListener("click", function() {
-    for (var option in options) {
-        var input = document.getElementById(option);
-        options[option] = (
-            typeof options[option] === "boolean" ?
-            input.checked : input.value
-        );
-    }
+for (var option in options) {
+    document.getElementById(option).addEventListener("change", save);
+}
+
+var statusTimeoutID;
+
+function save(event) {
+    var input = event.target, option = input.id;
+    options[option] = (
+        typeof options[option] === "boolean" ?
+        input.checked : input.value
+    );
 
     chrome.storage.local.set(options, function() {
         var status = document.getElementById("status");
-        status.textContent = "Options saved";
+        status.textContent = "Saved";
 
-        setTimeout(function() {
+        if (statusTimeoutID) clearTimeout(statusTimeoutID);
+        statusTimeoutID = setTimeout(function() {
             status.textContent = "";
         }, 750);
     });
-});
+}

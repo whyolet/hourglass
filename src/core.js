@@ -19,8 +19,11 @@ var audios = {
     // https://creativecommons.org/licenses/by-nc/4.0/
 };
 
+var audio;
+
 function play(url, volume) {
-    var audio = new Audio(url);
+    if (audio) audio.pause();
+    audio = new Audio(url);
     audio.volume = volume / 100;
     audio.play();
 }
