@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Whyolet Hourglass",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description" : "Minimalist hourglass button. Timebox speaking in meetings taking turns. Pomodoro technique, simple kitchen timer, minutes countdown.",
     "permissions": ["alarms", "notifications", "storage"],
     "background": {

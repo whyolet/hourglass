@@ -1,4 +1,4 @@
-// Whyolet Hourglass 0.1.0 - Core Library
+// Whyolet Hourglass: Core Library
 // Copyright (C) 2019 Denis Ryzhkov - https://whyolet.com/#hourglass
 
 "use strict";

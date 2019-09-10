@@ -1,4 +1,4 @@
-// Whyolet Hourglass 0.1.0
+// Whyolet Hourglass: Background Script
 // Copyright (C) 2019 Denis Ryzhkov - https://whyolet.com/#hourglass
 
 'use strict';
