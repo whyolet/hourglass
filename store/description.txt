@@ -1,27 +1,17 @@
-- Minimalist hourglass button for Chrome
-
-- Use it to timebox speaking in meetings taking turns,
-e.g. in stand-up meetings and retrospectives
-
-- May be used for Pomodoro technique
-in a manual mode as intended
-
-- Or as a simple kitchen timer with minutes countdown
-
+- Minimalist hourglass button for Chrome.
+- Use it to timebox speaking in meetings taking turns, e.g. in stand-up meetings and retrospectives.
+- May be used for Pomodoro technique or as a simple kitchen timer with minutes countdown.
 
 How to use:
+- Click the Hourglass button to set the number of minutes.
+- The number of minutes left is shown right on the button.
+- The background of this number changes from blue (all time left) through violet shades to red (one minute left).
+- It makes a Tick-Tock sound once a minute and a Cuckoo sound in the end.
+- To adjust the volume or to disable the sounds: right-click the Hourglass button and select Options.
 
-- Click this button to set the number of minutes
 
-- The number of minutes left is shown right on the button
-
-- The background of this number changes
-from blue (all time left)
-through violet shades
-to red (one minute left)
-
-- It makes a Tick-Tock sound once a minute
-and a Cuckoo sound in the end
-
-- To adjust the volume or to disable the sounds:
-right-click Hourglass button and select Options
+Category: Workflow & Planning
+Language: English
+Official URL: whyolet.com
+Homepage URL: https://github.com/whyolet/hourglass
+Support URL: https://github.com/whyolet/hourglass/issues

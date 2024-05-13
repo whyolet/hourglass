@@ -1,0 +1,15 @@
+Single purpose:
+Timebox events like speaking in meetings taking turns.
+
+Permission justification:
+alarms: It is used to update the number of minutes left (shown on the badge - extension button), to make a Tick-Tock sound once a minute, and a Cuckoo sound with a visual notification in the end.
+notifications: It shows "Done!" notification in the end of the timeboxed event.
+offscreen: It is used to input number of minutes using `window.prompt` and to play sounds using `new Audio` element without opening a new tab each time.
+storage: `chrome.storage.local` is used to store user preferences (options) like if sounds are enabled or not, and to store number of minutes entered/left.
+
+Are you using remote code?
+No, I am not using remote code
+
+Data usage:
+What user data do you plan to collect from users now or in the future? None.
+I certify that the following disclosures are true: All.
